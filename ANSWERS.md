@@ -255,18 +255,24 @@ properties go first, then other properties in insertion order.
 13. What would be the result of running the following code ?
 
 ```js
-const Func = () => {
-  this.prop = 5
-}
+const Func = () => {}
 
-let val = new Func() // ?
+const val = new Func() // ?
 ```
 
 ANSWER
 
-This example will throw with a `TypeError`. Arrow functions cannot be called as
-constructors. Furthermore they have no binding to `this` and `arguments`
-keywords.
+This example will throw with a `TypeError` as arrow functions cannot be called
+as constructors. Also for this reason the following expression will yield
+`undefined`.
+
+```js
+const Func = () => {}
+
+Func.prototype // undefined
+```
+
+Furthermore arrow functions have no binding to `this` and `arguments` keywords.
 
 14. What would be the result of running the following code ?
 
@@ -388,7 +394,7 @@ day-to-day programming. Consult this:
 
 ```js
 const str = 'abcdef'
-str.includes('bcd)
+str.includes('bcd')
 ```
 
 20. What would be the result of the following expression ?
@@ -401,4 +407,27 @@ ANSWER
 
 The `/abc/` notation is a literal creating the `RegExp` object, so the result
 is `object`.
+
+21. What is the difference between `Object.keys` and
+    `Object.getOwnPropertyNames` ?
+
+ANSWER
+
+`Object.keys` returns only enumerable properties but
+`Object.getOwnPropertyNames` returns both enumerable and non-enumerable
+properties. Consult this:
+
+```js
+const obj = {}
+
+obj['a'] = 'a'
+Object.defineProperty(obj, 'b', {})
+
+console.log(Object.keys(obj))                 // ['a']
+console.log(Object.getOwnPropertyNames(obj))  // ['a', 'b']
+```
+
+Properties initialized using syntax shorthands (e.g. simple assignment) are
+always enumerable, but properties defined via `Object.defineProperty` are
+non-enumerable by default.
 

@@ -1,6 +1,6 @@
 # Insane JavaScript interview
 
-This is a compilation of twenty hardest JavaScript questions that I could think
+This is a compilation of hardest JavaScript questions that I could think
 of. The difficulty level is beyond the level of sanity and even skilled
 programmers should never be bothered with such language features.  But if you
 are interested in the less-known parts of the spec - give it a try!
@@ -166,4 +166,7 @@ false.__proto__
 ```js
 typeof /abc/
 ```
+
+21. What is the difference between `Object.keys` and
+    `Object.getOwnPropertyNames` ?
 
