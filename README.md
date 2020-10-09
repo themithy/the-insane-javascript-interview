@@ -99,11 +99,9 @@ console.log(Object.values(obj)) // ?
 13. What would be the result of running the following code ?
 
 ```js
-const Func = () => {
-  this.prop = 5
-}
+const Func = () => {}
 
-let val = new Func() // ?
+const val = new Func() // ?
 ```
 
 14. What would be the result of running the following code ?
@@ -169,4 +167,212 @@ typeof /abc/
 
 21. What is the difference between `Object.keys` and
     `Object.getOwnPropertyNames` ?
+
+22. What would be the result of running the following code ?
+
+```js
+function a() {}
+const b = () => {}
+
+a.__proto__ == b.__proto__ // ?
+```
+
+23. What would be the result of running the following code ?
+
+```js
+Promise.resolve()
+  .then(() => Promise.resolve('abc'))
+  .then((val) => {
+    console.log(typeof val) // ?
+  })
+```
+
+24. What would be the result of the following expression ?
+
+```js
+1 + - 0 || new 0
+```
+
+25. What would be the result of running the following code ?
+
+```js
+async function print(val) {
+  console.log(val)
+}
+
+async function run() {
+  [1, 2, 3].forEach(async (val) => {
+    await print('A' + val)
+    print('B' + val)
+  })
+}
+
+run()
+```
+
+26. What would be the result of the following expression ?
+
+```js
+Symbol('1') + '2'
+```
+
+27. What would be the result of running the following code ?
+
+```js
+var a = b, b = 1
+
+console.log('a: ' + a) // ?
+console.log('b: ' + b) // ?
+```
+
+28. What would be the result of running the following code ?
+
+```js
+var prop = 1
+
+delete prop // ?
+```
+
+29. What would be the result of the following expression ?
+
+```js
+null == false
+```
+
+30. What would be the result of running the following code ?
+
+```js
+const a = new Date()
+const b = Object.assign(Object.create(Date.prototype), a)
+
+a.toString() == b.toString() // ?
+```
+
+31. What would be the result of running the following code ?
+
+```js
+const obj = {}
+const arr = []
+
+obj[5] = true
+arr[5] = true
+
+obj['5'] // ?
+arr['5'] // ?
+```
+
+32. What would be the result of running the following code ?
+
+```js
+const arr = [ 1, 2, 3 ]
+arr[7.5] = true
+
+arr.length = 0
+
+Object.getOwnPropertyNames(arr) // ?
+```
+
+33. What would be the result of running the following code ?
+
+```js
+function func() {
+  this.prop = 2
+  return { prop: 4 }
+}
+
+func.prototype.prop = 6
+
+const obj = new func()
+
+obj.prop // ?
+```
+
+34. What would be the result of running the following code ?
+
+```js
+const arr = []
+Object.setPrototypeOf(arr, Object.prototype)
+
+arr instanceof Array // ?
+```
+
+35. What would be the result of running the following code ?
+
+```js
+[ 0, 2, 4 ].flatMap((x) => [ x, x + 1 ])
+```
+
+36. What would be the result of the following expression ?
+
+```js
+new Int8Array instanceof Array
+```
+
+37. What would be the result of running the following code ?
+
+```js
+let i = 0
+
+for (; i < 10; i++) {
+  setTimeout(() => console.log('i=' + i))
+}
+```
+
+38. What would be the result of running the following code ?
+
+```js
+const obj = { a: true }
+
+for (const v of obj) {
+  console.log(v)
+}
+```
+
+39. What would be the result of running the following code ?
+
+```js
+const arr = []
+const it = arr[Symbol.iterator]()
+
+it.next() // ?
+```
+
+40.  What would be the result of running the following code ?
+
+```js
+const map = new Map()
+
+map['a'] = true
+map.set('b', true)
+
+map.get('a') // ?
+map['b'] // ?
+```
+
+41.  What would be the result of running the following code ?
+
+```js
+const arr = [1, 2, 3]
+
+for (const a of arr) {
+  if (a <= 3) {
+    arr.push(a + 3)
+  }
+  console.log(a)
+}
+```
+
+42.  What would be the result of running the following code ?
+
+```js
+const obj = {}
+
+Object.defineProperty(obj, 'a', {})
+Object.defineProperty(obj, 'b', { get: () => {} })
+Object.defineProperty(obj, 'c', { set: () => {} })
+
+Object.getOwnPropertyNames(obj) // ?
+```
+
+Final one. Why are all those questions so difficult ?
 
