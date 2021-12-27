@@ -374,5 +374,11 @@ Object.defineProperty(obj, 'c', { set: () => {} })
 Object.getOwnPropertyNames(obj) // ?
 ```
 
+43. What would be the result of the following expression ?
+
+```js
+NaN ** 0
+```
+
 Final one. Why are all those questions so difficult ?
 

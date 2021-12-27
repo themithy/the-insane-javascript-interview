@@ -936,6 +936,18 @@ ANSWER
 The result would be `[ 'a', 'b', 'c' ]`. Accessor properties are also object's
 own properties.
 
+QUESTION 43
+
+What would be the result of the following expression ?
+
+```js
+NaN ** 0
+```
+
+ANSWER
+
+The ECMAScript spec states that if the exponent is `0`, then the result is `1`, regardless of the base.
+
 FINAL QUESTION
 
 Why are all those questions so difficult ?
