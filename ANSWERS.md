@@ -695,6 +695,7 @@ What would be the result of running the following code ?
 
 ```js
 const arr = [ 1, 2, 3 ]
+arr[7.5] = true
 
 arr.length = 0
 
