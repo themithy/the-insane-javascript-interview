@@ -947,7 +947,14 @@ NaN ** 0
 
 ANSWER
 
-The ECMAScript spec states that if the exponent is `0`, then the result is `1`, regardless of the base.
+The ECMAScript spec states that if the exponent is `0`, then the result is `1`,
+regardless of the base. This is contrary to the popular belief that: if an
+expression includes *NaN*, then the result would be *NaN* too. This is also
+contrary to what we might expect from mathematics and the so called
+"indeterminate forms". Check this:
+```
+Infinity ** 0
+```
 
 FINAL QUESTION
 
