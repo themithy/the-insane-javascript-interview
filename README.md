@@ -400,9 +400,12 @@ new Func()
 
 ```js
 // 1.
-true + 1 // ?
+true + true // ?
 
 // 2.
+true + 1 // ?
+
+// 3.
 true + '1' // ?
 ```
 
