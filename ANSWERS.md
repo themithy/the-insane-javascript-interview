@@ -1018,6 +1018,36 @@ true + 1    // 2
 true + '1'  // 'true1'
 ```
 
+QUESTION 47
+
+What is the difference between `Function.prototype.call` and
+`Function.prototype.apply` ?
+
+ANSWER
+
+Both functions invoke a function with a set of arguments. The small difference
+lies in the fact that `call` accepts a *list* of arguments, but `apply` accepts
+an *array* of arguments:
+```js
+func.call(this, 1, 2, 3)
+func.apply(this, [1, 2, 3])
+```
+
+QUESTION 48
+
+What is the purpose of `Reflect.constuct` function ?
+
+ANSWER
+
+The function `Reflect.construct` is a way to call a constructor in the same way as the `new` keyword would do. The following are equivalent:
+```js
+// 1.
+Reflect.construct(Func, [])
+
+// 2.
+new Func()
+```
+
 FINAL QUESTION
 
 Why are all those questions so difficult ?

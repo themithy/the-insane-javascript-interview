@@ -409,4 +409,9 @@ true + 1 // ?
 true + '1' // ?
 ```
 
+47. What is the difference between `Function.prototype.call` and
+    `Function.prototype.apply` ?
+
+48. What is the purpose of `Reflect.constuct` function ?
+
 Final one. Why are all those questions so difficult ?
