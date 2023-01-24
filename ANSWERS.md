@@ -956,6 +956,35 @@ contrary to what we might expect from mathematics and the so called
 Infinity ** 0
 ```
 
+QUESTION 44
+
+What would be the result of the following expression ?
+
+```js
+JSON.parse('{}').__proto__
+```
+
+ANSWER
+
+This will be `Object.prototype` of course. `JSON.__proto__` would yield the
+same result.
+
+QUESTION 45
+
+What would be the result of running the following code ?
+
+```js
+function Func() {
+  return new this.constructor()
+}
+
+new Func()
+```
+
+ANSWER
+
+The code will throw with `RangeError` because of infinite constructor loop.
+
 FINAL QUESTION
 
 Why are all those questions so difficult ?

@@ -380,5 +380,20 @@ Object.getOwnPropertyNames(obj) // ?
 NaN ** 0
 ```
 
-Final one. Why are all those questions so difficult ?
+44. What would be the result of the following expression ?
 
+```js
+JSON.parse('{}').__proto__
+```
+
+45. What would be the result of running the following code ?
+
+```js
+function Func() {
+  return new this.constructor()
+}
+
+new Func()
+```
+
+Final one. Why are all those questions so difficult ?
