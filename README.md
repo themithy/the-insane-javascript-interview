@@ -412,6 +412,9 @@ true + '1' // ?
 47. What is the difference between `Function.prototype.call` and
     `Function.prototype.apply` ?
 
-48. What is the purpose of `Reflect.constuct` function ?
+48. What is the purpose of function `Reflect.construct` ?
+
+49. What is the difference between `Object.preventExtensions` and
+    `Reflect.preventExtensions` ?
 
 Final one. Why are all those questions so difficult ?

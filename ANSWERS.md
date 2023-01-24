@@ -1035,7 +1035,7 @@ func.apply(this, [1, 2, 3])
 
 QUESTION 48
 
-What is the purpose of `Reflect.constuct` function ?
+What is the purpose of function `Reflect.construct` ?
 
 ANSWER
 
@@ -1047,6 +1047,16 @@ Reflect.construct(Func, [])
 // 2.
 new Func()
 ```
+
+QUESTION 49
+
+What is the difference between `Object.preventExtensions` and
+`Reflect.preventExtensions` ?
+
+ANSWER
+
+The function `Reflect.preventExtensions` will throw if the argument is not an
+object.
 
 FINAL QUESTION
 
