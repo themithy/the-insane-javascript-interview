@@ -985,6 +985,39 @@ ANSWER
 
 The code will throw with `RangeError` because of infinite constructor loop.
 
+QUESTION 46
+
+What would be the result of the following expressions ?
+
+```js
+// 1.
+true + true // ?
+
+// 2.
+true + 1 // ?
+
+// 3.
+true + '1' // ?
+```
+
+ANSWER
+
+The basic principle of the of the addition operator is as follows:
+1. If any operand is a string, then convert to string and concatenate.
+2. Otherwise convert to number and add.
+
+Here is the result:
+```js
+// 1.
+true + true // 2
+
+// 2.
+true + 1    // 2
+
+// 3.
+true + '1'  // 'true1'
+```
+
 FINAL QUESTION
 
 Why are all those questions so difficult ?

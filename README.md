@@ -396,4 +396,14 @@ function Func() {
 new Func()
 ```
 
+46. What would be the result of the following expressions ?
+
+```js
+// 1.
+true + 1 // ?
+
+// 2.
+true + '1' // ?
+```
+
 Final one. Why are all those questions so difficult ?
